@@ -1,5 +1,43 @@
 <html>
   <body>
-    HELLO
+    we have made a ttrockstars hack.enjoy.setInterval(function() {
+    const questionElement = document.querySelector(".current-game-question")
+    
+    if (questionElement != null) {
+        const question = questionElement.innerText.split(" ")
+        const answer = question[1] == "×" ? question[0] * question[2] : question[0] / question[2]
+        const ansMsg = String(answer).split("")
+    
+        for (let i = 0; i < ansMsg.length; ++i) {
+            document.querySelector(`div[aria-label="${ansMsg[i]}"]`).click()
+        }
+    
+        document.querySelector('.key-ent').click()
+    } else {
+        const playAgainButton = document.querySelector(".play-button")
+        if (playAgainButton != null) {
+            playAgainButton.click()
+        }
+    }
+    
+}, 250)
+                                          this one keeps running
+                                          setInterval(function() {
+    const questionElement = document.querySelector(".current-game-question")
+    
+    if (questionElement != null) {
+        const question = questionElement.innerText.split(" ")
+        const answer = question[1] == "×" ? question[0] * question[2] : question[0] / question[2]
+        const ansMsg = String(answer).split("")
+    
+        for (let i = 0; i < ansMsg.length; ++i) {
+            document.querySelector(`div[aria-label="${ansMsg[i]}"]`).click()
+        }
+    
+        document.querySelector('.key-ent').click()
+    }
+    
+}, 250)
+    this one only works in garage,jamming and studio.it does not stay running.you see the two hundred and fifty? change that to a bigger number and it will go slower.this is the max speed it will work on.
   </body>
 </html>
